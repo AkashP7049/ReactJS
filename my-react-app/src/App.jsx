@@ -1,5 +1,8 @@
+import Clock from "./Clock"
 import Index from "./Comp/Index"
 import Home from "./Home"
+import Input from "./Input"
+import ToDoList from "./ToDoList"
 
 
 const App = () => {
@@ -8,9 +11,12 @@ const App = () => {
   return (
     <div>
      <h1>HELLO</h1>
-     <p>Hiiii</p>
+      <p>Hiiii</p>
      <Home  data={a} data1={b} />
-     <Index/>
+      <Index/>
+      <Clock/>
+     <Input/>
+     <ToDoList/>
     </div>
 
   )

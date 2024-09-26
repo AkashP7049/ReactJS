@@ -42,7 +42,7 @@ const NavBar = () => {
   </div>
 </nav>
        
-        {/* <nav>
+        {/* { <nav>
         <Link to='/'>
        <li>Home</li>
        </Link>
@@ -52,7 +52,7 @@ const NavBar = () => {
        <Link to='contact'>
        <li>Contact Us</li>
        </Link>
-        </nav> */}
+        </nav> } */}
       
     </div>
   )

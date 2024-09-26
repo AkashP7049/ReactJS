@@ -11,6 +11,7 @@ import About from "./About"
 import "./App.css"
 import {BrowserRouter as Router , Route , Routes} from 'react-router-dom'
 import C from "./C"
+import Foam from "./Foam"
 const App = () => {
   let a=5
   let b=56
@@ -24,8 +25,8 @@ const App = () => {
      <Input/>
      <ToDoList/>
      <Count/> */}
-     <NavBar/>
-     <C/>
+     {/* <NavBar/>
+     <C/> */}
      {/* <Router>
      <NavBar/>
      <Routes>
@@ -35,7 +36,7 @@ const App = () => {
      </Routes>
      </Router> */}
      
-     
+     <Foam/>
 
     </div>
 

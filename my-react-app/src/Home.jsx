@@ -1,12 +1,23 @@
-import New from "./New"
+// import New from "./New"
 
 
-const Home = (chota) => {
-  return (
-    <div>
+// const Home = (chota) => {
+//   return (
+//     <div>
         
-        <New d={chota.data} />
-    </div>
-  )
-}
-  export default Home 
+//         <New d={chota.data} />
+//     </div>
+//   )
+// }
+  // export default Home 
+ 
+
+
+  
+  const Home = () => {
+    return (
+      <div>Home</div>
+    )
+  }
+  
+  export default Home

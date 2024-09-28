@@ -19,7 +19,7 @@ const App = () => {
     <div>
      {/* <h1>HELLO</h1>
       <p>Hiiii</p>
-     <Home  data={a} data1={b} />
+   <Home  data={a} data1={b} />
       <Index/>
       <Clock/>
      <Input/>
@@ -36,7 +36,8 @@ const App = () => {
      </Routes>
      </Router> */}
      
-     <Foam/>
+     {/* <Foam/> */}
+     <Home/>
 
     </div>
 

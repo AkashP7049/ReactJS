@@ -12,6 +12,8 @@ import "./App.css"
 import {BrowserRouter as Router , Route , Routes} from 'react-router-dom'
 import C from "./C"
 import Foam from "./Foam"
+import Login from "./Login"
+import SignUp from "./SignUp"
 const App = () => {
   let a=5
   let b=56
@@ -37,8 +39,13 @@ const App = () => {
      </Router> */}
      
      {/* <Foam/> */}
-     <Home/>
-
+     {/* <Home/> */}
+     <Router>
+        <Routes>
+         <Route   path='/' element={<SignUp/>} />
+         <Route   path='/login' element={<Login/>} />
+       </Routes>
+       </Router>
     </div>
 
   )

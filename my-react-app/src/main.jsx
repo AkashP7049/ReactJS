@@ -9,5 +9,5 @@ createRoot(document.getElementById('root')).render(
   <Context.Provider value='hello'>   
     <App />
     </Context.Provider>
- 
+
 )

@@ -8,12 +8,12 @@ import NavBar from "./NavBar"
 import ToDoList from "./ToDoList"
 import Contact from "./Contact"
 import About from "./About"
-import "./App.css"
 import {BrowserRouter as Router , Route , Routes} from 'react-router-dom'
 import C from "./C"
 import Foam from "./Foam"
 import Login from "./Login"
 import SignUp from "./SignUp"
+import Api from "./Api"
 const App = () => {
   let a=5
   let b=56
@@ -40,14 +40,20 @@ const App = () => {
      
      {/* <Foam/> */}
      {/* <Home/> */}
-     <Router>
+
+     
+     {/* <Router>
         <Routes>
          <Route   path='/' element={<SignUp/>} />
          <Route   path='/login' element={<Login/>} />
+      
        </Routes>
-       </Router>
+       </Router> */}
+       <Api/>
+      
     </div>
 
   )
 }
 export default App
+

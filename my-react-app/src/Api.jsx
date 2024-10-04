@@ -116,6 +116,9 @@
 
 // export default Api
 
+
+
+
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import './App.css';
@@ -187,3 +190,72 @@ const Api = () => {
 }
 
 export default Api;
+
+
+
+
+// import { useState } from "react"
+
+// const Api = () => {
+
+//  let [bool,SetBool]=useState(false)
+//  function change(){
+//   if(bool===true){
+//     SetBool(false)
+//   }else{
+//     SetBool(true)
+//   }
+//  }
+//   return (
+//     <div style={bool?{backgroundColor:'blue',height:'400px'}:{backgroundColor:'red',height:'400px'}}>
+//     <button style={bool?{backgroundColor:'gray'}:{backgroundColor:'yellow'}}onClick={change} >Change</button>
+//      </div>
+//   )
+// }
+
+// export default Api
+
+
+
+
+
+
+// import { useState } from "react"
+// const Api = () => {
+//   let [ city , Setcity]=useState('Indore');
+// function done(){
+//   const cities = ['delhi', 'mumbai', 'nagpur','Bhopal','narshinghpur'];
+//     const currentIndex = cities.indexOf(city);
+//     const nextIndex = (currentIndex + 1) % cities.length; // Loop back to the start
+//     Setcity(cities[nextIndex]);
+// }
+//   return (
+//     <div>
+//       <h2>{city}</h2>
+//       <button onClick={done}>click</button>
+//     </div>
+//   )
+// }
+
+// export default Api
+
+
+
+
+// import { useState } from "react"
+
+
+// const Api = () => {
+//  let [data , setdata]=useState('')
+//  function done(e){
+//   setdata(e.target.value)
+//  }
+//   return (
+//     <div>
+//       <h1>{data}</h1>
+//       <input onChange={done} type="text" placeholder="kuch bhe likho " />
+//     </div>
+//   )
+// }
+
+// export default Api

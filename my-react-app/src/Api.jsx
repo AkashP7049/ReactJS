@@ -121,7 +121,7 @@
 
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import './App.css';
+// import './App.css';
 
 const Api = () => {
   // State for storing data and filter type

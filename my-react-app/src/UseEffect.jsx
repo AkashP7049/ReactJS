@@ -46,7 +46,7 @@ import { useEffect, useState } from "react"
 const UseEffect = () => {
     let [data , setdata]=useState([])
     let [filter, setFilter] = useState("all");
-    let[FilteredData,setFilteredData]=useState();
+    let[FilteredData,setFilteredData]=useState([]);
 
     async function call(){
         try {
@@ -97,14 +97,23 @@ const UseEffect = () => {
                 } 
                     
               });
-              function done(id){
-                let newData=filteredData.filter((c,d)=>{
-                    // console.log(d!==id,'fghjk')
-                    return d!==id
+            //   function done(id){
+            //     let newData=filteredData.filter((c,d)=>{
+            //         // console.log(d!==id,'fghjk')
+            //         return d!==id
 
-                })
-                setdata(newData)
-              }
+            //     })
+            //     setdata(newData)
+            //   }
+            function done(id) {
+                console.log(id,"heheheheh");
+                
+                const newData = filteredData.filter((c , d) => 
+                    d!== id
+            );
+                filteredData(newData); // Update the original data
+            }
+        
   return (
     <>
     <div style={{backgroundColor:'red'}} >
@@ -125,7 +134,7 @@ const UseEffect = () => {
         return(
             
             <div  style={{display:"flex",justifyContent:'center'}}>
-                <button style={{height:'30px'}} onClick={(()=>{done(b)})}>Delete</button>
+                <button style={{height:'30px'}} onClick={()=>done(b)}>Delete</button>
                <img  height='230px' src={a.image} alt="" />
               <p > Name: "{a.firstName} {a.lastName}" bloodGroup: "{a.bloodGroup}" EyeColor: "{a.eyeColor}"</p> 
                
@@ -141,3 +150,66 @@ const UseEffect = () => {
 }
 
 export default UseEffect
+
+// import axios from "axios";
+// import { useEffect, useState } from "react";
+
+// const UseEffect = () => {
+//     const [data, setData] = useState([]);
+//     const [filter, setFilter] = useState("all");
+
+//     async function call() {
+//         try {
+//             let apiData = await axios('https://dummyjson.com/users');
+//             setData(apiData.data.users);
+//             console.log(apiData.data.users);
+//         } catch (error) {
+//             console.error("Error fetching data", error);
+//         }
+//     }
+
+//     useEffect(() => {
+//         call();
+//     }, []);
+
+//     // Filtered data based on current filter state
+//     const filteredData = data.filter((user) => {
+//         if (filter === "all") return true;
+//         return user.eyeColor === filter;
+//     });
+
+//     function done(id) {
+//         const newData = data.filter((_, index) => index !== id);
+//         setData(newData); // Update the original data
+//     }
+
+//     return (
+//         <>
+//             <div style={{ backgroundColor: 'red' }}>
+//                 <h2>Select Eye Color Button</h2>
+//                 <button style={{ backgroundColor: 'green' }} onClick={() => setFilter("Green")}>Green</button>
+//                 <button style={{ backgroundColor: 'red' }} onClick={() => setFilter("Red")}>Red</button>
+//                 <button style={{ backgroundColor: 'brown' }} onClick={() => setFilter("Brown")}>Brown</button>
+//                 <button style={{ backgroundColor: '#2c8da9' }} onClick={() => setFilter("Hazel")}>Hazel</button>
+//                 <button style={{ backgroundColor: 'Violet' }} onClick={() => setFilter("Violet")}>Violet</button>
+//                 <button style={{ backgroundColor: 'grey' }} onClick={() => setFilter("Gray")}>Gray</button>
+//                 <button style={{ backgroundColor: '#FFF8E1' }} onClick={() => setFilter("Amber")}>Amber</button>
+//                 <button style={{ backgroundColor: '#333' }} onClick={() => setFilter("all")}>All</button>
+//             </div>
+
+//             <div>
+//                 {
+//                     filteredData.map((user, index) => (
+//                         <div key={user.id} style={{ display: "flex", justifyContent: 'center' }}>
+//                             <button style={{ height: '30px' }} onClick={() => done(index)}>Delete</button>
+//                             <img height='230px' src={user.image} alt="" />
+//                             <p>Name: "{user.firstName} {user.lastName}" bloodGroup: "{user.bloodGroup}" EyeColor: "{user.eyeColor}"</p>
+//                         </div>
+//                     ))
+//                 }
+//             </div>
+//         </>
+//     );
+// };
+
+// export default UseEffect;

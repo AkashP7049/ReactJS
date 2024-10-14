@@ -1,23 +1,27 @@
 // import Clock from "./Clock"
 // import Index from "./Comp/Index"
 // import Count from "./Count"
-// import Home from "./Home"
-// import Homee from "./Homee"
+ import Home from "./Home"
+//import Homee from "./Homee"
 // import Input from "./Input"
-// import NavBar from "./NavBar"
+ import NavBar from "./NavBar"
 // import ToDoList from "./ToDoList"
 // import Contact from "./Contact"
-// import About from "./About"
-// import {BrowserRouter as Router , Route , Routes} from 'react-router-dom'
+ import About from "./About"
+ import {BrowserRouter as Router , Route , Routes} from 'react-router-dom'
 // import C from "./C"
 // import Foam from "./Foam"
-// import Login from "./Login"
+ import Login from "./Login"
+import Contact from "./Contact"
+import Cart from "./Cart"
+import { useState } from "react"
 // import SignUp from "./SignUp"
 // import Api from "./Api"
-import UseEffect from "./UseEffect"
+//import UseEffect from "./UseEffect"
 const App = () => {
-  let a=5
-  let b=56
+  // let [cartData,setcartData]=useState('')
+  // let a=5
+  // let b=56
   return (
     <div>
      {/* <h1>HELLO</h1>
@@ -28,20 +32,32 @@ const App = () => {
      <Input/>
      <ToDoList/>
      <Count/> */}
-     {/* <NavBar/>
-     <C/> */}
-     {/* <Router>
+     {/* <NavBar/> */}
+     {/* <C/> */}
+
+     {/* <Router> */}
      <NavBar/>
-     <Routes>
-      <Route path="/" element={<Homee/>}/>
+      {/* <Routes>
+      <Route path="/" element={<Home cartData={cartData} setcartData={setcartData}/>}/>
       <Route path="/about" element={<About/>}/>
       <Route path="/contact" element={<Contact/>}/>
-     </Routes>
-     </Router> */}
+      <Route path='/login' element={<Cart cartData={cartData} setcartData={setcartData}/>}/>
+     </Routes>  */}
+
+<Routes>
+      <Route path="/" element={<Home />}/>
+      <Route path="/about" element={<About/>}/>
+      <Route path="/contact" element={<Contact/>}/>
+      <Route path='/login' element={<Cart />}/>
+     </Routes> 
+ 
+     {/* </Router> */}
      
      {/* <Foam/> */}
-     {/* <Home/> */}
-
+     {/* <Home/>
+     <About/>
+     <Login/>
+     <Contact/> */}
      
      {/* <Router>
         <Routes>
@@ -51,7 +67,7 @@ const App = () => {
        </Routes>
        </Router> */}
 
-       <UseEffect/>
+       {/* <UseEffect/> */}
        {/* <Api/> */}
     </div>
 

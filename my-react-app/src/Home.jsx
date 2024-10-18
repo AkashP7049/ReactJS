@@ -91,23 +91,31 @@
 // export default Home
 
 import React, { useEffect, useState } from 'react'
-
+import "react-loading-skeleton/dist/skeleton.css"
 import './Home.css'
 import Food from './Food'
 const Home = ({}) => {
+  let[loading,setloading]=useState(true);
   let [apiData,setapiData]=useState([])
   useEffect(()=>{
+    setTimeout(()=>{
+      setloading(false)
+    },3000)
+  },[])
+  useEffect(()=>{
+    setTimeout(()=>{
     fetch('https://dummyjson.com/recipes').then((res)=>{
       return res.json()
     }).then((data)=>{
      console.log(data.recipes);
      setapiData(data.recipes)
     })
+  },3000)
   },[])
   
   return (
     <div>
-     <Food apiData={apiData} />
+     <Food apiData={apiData} loading={loading}/>
      
     </div>
   )

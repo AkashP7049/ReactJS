@@ -6,6 +6,10 @@ import Contact from './Contact.jsx'
 import CartProvider from './Context.jsx'
 
 import { BrowserRouter } from 'react-router-dom'
+import DataProvider from './ToDoListContext.jsx'
+import Homee from './Homee.jsx'
+import Home from './Home.jsx'
+import UseMemo from './UseMemo.jsx'
 
 createRoot(document.getElementById('root')).render(
 
@@ -14,11 +18,16 @@ createRoot(document.getElementById('root')).render(
   //   </Context.Provider>
  
   <BrowserRouter>
+  <DataProvider>
   <CartProvider>
     {/* <About/> */}
     <App/>
+    {/* <Homee/> */}
     </CartProvider>
-   
+   </ DataProvider>
   </BrowserRouter>
+
+
+// <UseMemo/>
 
 )

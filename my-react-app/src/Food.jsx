@@ -39,7 +39,7 @@
 import React, { useContext } from 'react';
 import { Context, } from './Context';
 
-const Food = ({ apiData,}) => {
+const Food = ({ apiData, loading}) => {
   // console.log(SetCartData,"fun111");
 
   // let {distach}=    CartProvider
@@ -116,6 +116,14 @@ const Food = ({ apiData,}) => {
 
   return (
     <div>
+     {loading ? (
+      <h2 style={{height:'50px',backgroundColor:'yellow',display:'flex',alignItems:'center'}}>loading...</h2>
+     ):(
+      <div>
+        <h2 style={{height:'50px',backgroundColor:'yellow',display:'flex',alignItems:'center'}}>Content loaded</h2>
+      </div>
+     )}
+
       {apiData.map((item,index) => (
         <div key={item.id} id='card'>
           <img src={item.image} alt={item.name} />

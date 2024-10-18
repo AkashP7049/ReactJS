@@ -5,7 +5,7 @@
 //import Homee from "./Homee"
 // import Input from "./Input"
  import NavBar from "./NavBar"
-// import ToDoList from "./ToDoList"
+import ToDoList from "./ToDoList"
 // import Contact from "./Contact"
  import About from "./About"
  import {BrowserRouter as Router , Route , Routes} from 'react-router-dom'
@@ -15,6 +15,7 @@
 import Contact from "./Contact"
 import Cart from "./Cart"
 import { useState } from "react"
+import Homee from "./Homee"
 // import SignUp from "./SignUp"
 // import Api from "./Api"
 //import UseEffect from "./UseEffect"
@@ -29,9 +30,10 @@ const App = () => {
    <Home  data={a} data1={b} />
       <Index/>
       <Clock/>
-     <Input/>
-     <ToDoList/>
-     <Count/> */}
+     <Input/> */}
+     {/* <ToDoList/> */}
+     {/* <Homee/> */}
+     {/* <Count/> */}
      {/* <NavBar/> */}
      {/* <C/> */}
 
@@ -49,7 +51,7 @@ const App = () => {
       <Route path="/about" element={<About/>}/>
       <Route path="/contact" element={<Contact/>}/>
       <Route path='/login' element={<Cart />}/>
-     </Routes> 
+     </Routes>  
  
      {/* </Router> */}
      
